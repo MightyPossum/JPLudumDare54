@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://nkpcrt1hqqbx"]
+
+[ext_resource type="PackedScene" uid="uid://1vgoxjkbnksn" path="res://player.tscn" id="1_376uc"]
+[ext_resource type="Script" path="res://GameManager.gd" id="1_khf10"]
+[ext_resource type="PackedScene" uid="uid://n7l2x7xkeubj" path="res://ground_basic.tscn" id="2_m0mis"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_khf10")
+
+[node name="Player" parent="." instance=ExtResource("1_376uc")]
+position = Vector2(272, 164)
+
+[node name="GroundBasic" parent="." instance=ExtResource("2_m0mis")]
+position = Vector2(35, 292)
+
+[node name="GroundBasic2" parent="." instance=ExtResource("2_m0mis")]
+position = Vector2(99, 292)
+
+[node name="GroundBasic3" parent="." instance=ExtResource("2_m0mis")]
+position = Vector2(163, 292)
+
+[node name="GroundBasic4" parent="." instance=ExtResource("2_m0mis")]
+position = Vector2(227, 292)
+
+[node name="GroundBasic5" parent="." instance=ExtResource("2_m0mis")]
+position = Vector2(291, 292)
+
+[node name="GroundBasic6" parent="." instance=ExtResource("2_m0mis")]
+position = Vector2(355, 292)
+
+[node name="GroundBasic7" parent="." instance=ExtResource("2_m0mis")]
+position = Vector2(419, 292)
+
+[node name="GroundBasic8" parent="." instance=ExtResource("2_m0mis")]
+position = Vector2(483, 292)
+
+[node name="GroundBasic9" parent="." instance=ExtResource("2_m0mis")]
+position = Vector2(547, 292)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(290.895, 0)

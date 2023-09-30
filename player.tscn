@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://1vgoxjkbnksn"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_xhdek"]
+[ext_resource type="Texture2D" uid="uid://ble47kx6hhvl8" path="res://assets/ChrTst1.png" id="2_kgi3e"]
+[ext_resource type="PackedScene" uid="uid://2250o85agq15" path="res://projectile.tscn" id="2_n1l4t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7654"]
+size = Vector2(13.5135, 9.68318)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lj144"]
+radius = 9.89011
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_xhdek")
+Projectile = ExtResource("2_n1l4t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 16.2816)
+scale = Vector2(1.48, 3.15632)
+shape = SubResource("RectangleShape2D_c7654")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -13)
+scale = Vector2(1.92111, 1.95632)
+shape = SubResource("CircleShape2D_lj144")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kgi3e")
