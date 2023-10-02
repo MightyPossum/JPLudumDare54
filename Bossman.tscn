@@ -1,0 +1,76 @@
+[gd_scene load_steps=15 format=3 uid="uid://bd58oximgjdw0"]
+
+[ext_resource type="Script" path="res://Bossmann.gd" id="1_48c63"]
+[ext_resource type="PackedScene" uid="uid://jccnx3jsbxyl" path="res://projectileBossman.tscn" id="2_6xxnl"]
+[ext_resource type="Texture2D" uid="uid://02bfnwdqmfe0" path="res://assets/Enemies/Boss/Boss_1.png" id="2_oyacg"]
+[ext_resource type="PackedScene" uid="uid://dranjc4dbnd0v" path="res://enemy1_shot_particle.tscn" id="3_50abf"]
+[ext_resource type="Texture2D" uid="uid://dd0xwftf2uv64" path="res://assets/Enemies/Boss/Boss_2.png" id="3_u3uhc"]
+[ext_resource type="PackedScene" uid="uid://dq341d82qsyv8" path="res://key_particle.tscn" id="4_i4361"]
+[ext_resource type="Texture2D" uid="uid://ciwqvpp0ukwx7" path="res://assets/Enemies/Boss/Boss_3.png" id="4_qxaip"]
+[ext_resource type="Texture2D" uid="uid://dixdhvr5xacrw" path="res://assets/Enemies/Boss/Boss_4.png" id="5_dcaho"]
+[ext_resource type="PackedScene" uid="uid://f1mpkhdklid2" path="res://key_particle_alt1.tscn" id="5_m5w5r"]
+[ext_resource type="Texture2D" uid="uid://dhbhlutayfkeq" path="res://assets/Enemies/Boss/Boss_5.png" id="6_hgwkb"]
+[ext_resource type="AudioStream" uid="uid://xkvcf3i61vdf" path="res://assets/Sounds/hitHurt (1).wav" id="11_6wwnw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rsh7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oyacg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u3uhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qxaip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dcaho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hgwkb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qglmw"]
+size = Vector2(97.4715, 212.056)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyfk8"]
+size = Vector2(64, 128)
+
+[node name="Bossman" type="RigidBody2D" groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_48c63")
+Projectile = ExtResource("2_6xxnl")
+boss_impact_particle_1 = ExtResource("3_50abf")
+boss_impact_particle_2 = ExtResource("4_i4361")
+boss_impact_particle_3 = ExtResource("5_m5w5r")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_rsh7q")
+frame_progress = 0.49359
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-17, -0.500002)
+scale = Vector2(0.656602, 0.60833)
+shape = SubResource("RectangleShape2D_qglmw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-17, 0)
+shape = SubResource("RectangleShape2D_qyfk8")
+
+[node name="HitAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_6wwnw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt11bvrkisj46"]
+
+[ext_resource type="Texture2D" uid="uid://da0hjc0rs5dfp" path="res://assets/Level/CAS_Wall_Bottom.png" id="1_ab1iw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixv0g"]
+
+[node name="Wall_bottom" type="StaticBody2D" groups=["Wall"]]
+collision_layer = 15
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-20, 0)
+texture = ExtResource("1_ab1iw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.20617, 3.19816)
+shape = SubResource("RectangleShape2D_ixv0g")

@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv50iodm1qo35"]
+
+[ext_resource type="Texture2D" uid="uid://bd6vkm6b6r4a6" path="res://assets/Level/2/Lev2_Top_Center.png" id="1_lgu6p"]
+[ext_resource type="Texture2D" uid="uid://ukfuvlrgvet6" path="res://assets/Level/2/Lev2_Bottom_Center.png" id="2_agwhk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycu8s"]
+size = Vector2(119.735, 37.5)
+
+[node name="GroundBasic" type="StaticBody2D" groups=["Wall"]]
+collision_layer = 7
+collision_mask = 7
+
+[node name="LevGroundTop" type="Sprite2D" parent="."]
+texture = ExtResource("1_lgu6p")
+
+[node name="LevGroundBottom" type="Sprite2D" parent="."]
+position = Vector2(0, 64)
+texture = ExtResource("2_agwhk")
+
+[node name="LevGroundTop2" type="Sprite2D" parent="."]
+position = Vector2(64, 0)
+texture = ExtResource("1_lgu6p")
+
+[node name="LevGroundBottom2" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("2_agwhk")
+
+[node name="LevGroundTop3" type="Sprite2D" parent="."]
+position = Vector2(128, 0)
+texture = ExtResource("1_lgu6p")
+
+[node name="LevGroundBottom3" type="Sprite2D" parent="."]
+position = Vector2(128, 64)
+texture = ExtResource("2_agwhk")
+
+[node name="LevGroundTop4" type="Sprite2D" parent="."]
+position = Vector2(192, 0)
+texture = ExtResource("1_lgu6p")
+
+[node name="LevGroundBottom4" type="Sprite2D" parent="."]
+position = Vector2(192, 64)
+texture = ExtResource("2_agwhk")
+
+[node name="LevGroundTop5" type="Sprite2D" parent="."]
+position = Vector2(256, 0)
+texture = ExtResource("1_lgu6p")
+
+[node name="LevGroundBottom5" type="Sprite2D" parent="."]
+position = Vector2(256, 64)
+texture = ExtResource("2_agwhk")
+
+[node name="LevGroundTop6" type="Sprite2D" parent="."]
+position = Vector2(320, 0)
+texture = ExtResource("1_lgu6p")
+
+[node name="LevGroundBottom6" type="Sprite2D" parent="."]
+position = Vector2(320, 64)
+texture = ExtResource("2_agwhk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(160, 32)
+scale = Vector2(3.20708, 1.6)
+shape = SubResource("RectangleShape2D_ycu8s")

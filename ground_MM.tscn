@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkei16urhght4"]
+
+[ext_resource type="Texture2D" uid="uid://rh1jfns53vij" path="res://assets/Level/Lev_Ground.png" id="1_r7o5a"]
+[ext_resource type="Texture2D" uid="uid://bt1havo8ykpmy" path="res://assets/Level/Lev_Ground_Bottom.png" id="2_py7wf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycu8s"]
+size = Vector2(119.735, 37.5)
+
+[node name="GroundBasic" type="StaticBody2D" groups=["Wall"]]
+collision_layer = 7
+collision_mask = 7
+
+[node name="LevGroundTop" type="Sprite2D" parent="."]
+texture = ExtResource("1_r7o5a")
+
+[node name="LevGroundBottom" type="Sprite2D" parent="."]
+position = Vector2(0, 64)
+texture = ExtResource("2_py7wf")
+
+[node name="LevGroundTop2" type="Sprite2D" parent="."]
+position = Vector2(64, 0)
+texture = ExtResource("1_r7o5a")
+
+[node name="LevGroundBottom2" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("2_py7wf")
+
+[node name="LevGroundTop3" type="Sprite2D" parent="."]
+position = Vector2(128, 0)
+texture = ExtResource("1_r7o5a")
+
+[node name="LevGroundBottom3" type="Sprite2D" parent="."]
+position = Vector2(128, 64)
+texture = ExtResource("2_py7wf")
+
+[node name="LevGroundTop4" type="Sprite2D" parent="."]
+position = Vector2(192, 0)
+texture = ExtResource("1_r7o5a")
+
+[node name="LevGroundBottom4" type="Sprite2D" parent="."]
+position = Vector2(192, 64)
+texture = ExtResource("2_py7wf")
+
+[node name="LevGroundTop5" type="Sprite2D" parent="."]
+position = Vector2(256, 0)
+texture = ExtResource("1_r7o5a")
+
+[node name="LevGroundBottom5" type="Sprite2D" parent="."]
+position = Vector2(256, 64)
+texture = ExtResource("2_py7wf")
+
+[node name="LevGroundTop6" type="Sprite2D" parent="."]
+position = Vector2(320, 0)
+texture = ExtResource("1_r7o5a")
+
+[node name="LevGroundBottom6" type="Sprite2D" parent="."]
+position = Vector2(320, 64)
+texture = ExtResource("2_py7wf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(160, 32)
+scale = Vector2(3.20708, 1.6)
+shape = SubResource("RectangleShape2D_ycu8s")

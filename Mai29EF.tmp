@@ -1,0 +1,289 @@
+[gd_scene load_steps=6 format=3 uid="uid://nkpcrt1hqqbx"]
+
+[ext_resource type="PackedScene" uid="uid://1vgoxjkbnksn" path="res://player.tscn" id="1_376uc"]
+[ext_resource type="Script" path="res://GameManager.gd" id="1_khf10"]
+[ext_resource type="PackedScene" uid="uid://n7l2x7xkeubj" path="res://ground_basic.tscn" id="2_m0mis"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="4_813fd"]
+[ext_resource type="PackedScene" uid="uid://if7maxmy1mhl" path="res://Enemy1.tscn" id="5_nnwex"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_khf10")
+
+[node name="Player" parent="." instance=ExtResource("1_376uc")]
+position = Vector2(291, 251)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(292, 166)
+scale = Vector2(1, -0.519999)
+script = ExtResource("4_813fd")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="GroundBasic2" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(99, 292)
+
+[node name="GroundBasic3" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(163, 292)
+
+[node name="GroundBasic4" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(227, 292)
+
+[node name="GroundBasic5" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(291, 292)
+
+[node name="GroundBasic6" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(355, 292)
+
+[node name="GroundBasic7" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(419, 292)
+
+[node name="GroundBasic8" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(483, 292)
+
+[node name="GroundBasic40" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(99, 112)
+
+[node name="GroundBasic41" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(163, 112)
+
+[node name="GroundBasic42" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(227, 112)
+
+[node name="GroundBasic43" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(291, 112)
+
+[node name="GroundBasic44" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(355, 112)
+
+[node name="GroundBasic45" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(419, 112)
+
+[node name="GroundBasic46" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(483, 112)
+
+[node name="GroundBasic9" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(131, 1022)
+
+[node name="GroundBasic10" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(195, 1022)
+
+[node name="GroundBasic11" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(259, 1022)
+
+[node name="GroundBasic12" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(323, 1022)
+
+[node name="GroundBasic13" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(387, 1022)
+
+[node name="GroundBasic14" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(451, 1022)
+
+[node name="GroundBasic15" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(515, 1022)
+
+[node name="GroundBasic23" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-317, 1022)
+
+[node name="GroundBasic24" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-253, 1022)
+
+[node name="GroundBasic25" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-189, 1022)
+
+[node name="GroundBasic26" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-125, 1022)
+
+[node name="GroundBasic27" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-61, 1022)
+
+[node name="GroundBasic28" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(3, 1022)
+
+[node name="GroundBasic29" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(67, 1022)
+
+[node name="GroundBasic30" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1027, 1022)
+
+[node name="GroundBasic31" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1091, 1022)
+
+[node name="GroundBasic32" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1155, 1022)
+
+[node name="GroundBasic33" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1219, 1022)
+
+[node name="GroundBasic34" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1283, 1022)
+
+[node name="GroundBasic35" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1347, 1022)
+
+[node name="GroundBasic36" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1411, 1022)
+
+[node name="GroundBasic37" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1475, 1022)
+
+[node name="GroundBasic38" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1539, 1022)
+
+[node name="GroundBasic39" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1603, 1022)
+
+[node name="GroundBasic47" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 990)
+rotation = 1.57158
+
+[node name="GroundBasic48" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 926)
+rotation = 1.57158
+
+[node name="GroundBasic49" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 862)
+rotation = 1.57158
+
+[node name="GroundBasic50" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 798)
+rotation = 1.57158
+
+[node name="GroundBasic51" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 734)
+rotation = 1.57158
+
+[node name="GroundBasic52" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 670)
+rotation = 1.57158
+
+[node name="GroundBasic53" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 606)
+rotation = 1.57158
+
+[node name="GroundBasic54" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 542)
+rotation = 1.57158
+
+[node name="GroundBasic55" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 478)
+rotation = 1.57158
+
+[node name="GroundBasic56" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 414)
+rotation = 1.57158
+
+[node name="GroundBasic57" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 350)
+rotation = 1.57158
+
+[node name="GroundBasic58" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 286)
+rotation = 1.57158
+
+[node name="GroundBasic59" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 222)
+rotation = 1.57158
+
+[node name="GroundBasic60" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 158)
+rotation = 1.57158
+
+[node name="GroundBasic61" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 94.0001)
+rotation = 1.57158
+
+[node name="GroundBasic62" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(1654, 30)
+rotation = 1.57158
+
+[node name="GroundBasic63" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 990)
+rotation = -1.5708
+
+[node name="GroundBasic64" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 926)
+rotation = -1.5708
+
+[node name="GroundBasic65" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 862)
+rotation = -1.5708
+
+[node name="GroundBasic66" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 798)
+rotation = -1.5708
+
+[node name="GroundBasic67" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 734)
+rotation = -1.5708
+
+[node name="GroundBasic68" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 670)
+rotation = -1.5708
+
+[node name="GroundBasic69" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 606)
+rotation = -1.5708
+
+[node name="GroundBasic70" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 542)
+rotation = -1.5708
+
+[node name="GroundBasic71" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 478)
+rotation = -1.5708
+
+[node name="GroundBasic72" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 414)
+rotation = -1.5708
+
+[node name="GroundBasic73" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 350)
+rotation = -1.5708
+
+[node name="GroundBasic74" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 286)
+rotation = -1.5708
+
+[node name="GroundBasic75" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 222)
+rotation = -1.5708
+
+[node name="GroundBasic76" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 158)
+rotation = -1.5708
+
+[node name="GroundBasic77" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 94.0001)
+rotation = -1.5708
+
+[node name="GroundBasic78" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(-300, 30)
+rotation = -1.5708
+
+[node name="GroundBasic16" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(579, 1022)
+
+[node name="GroundBasic17" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(643, 1022)
+
+[node name="GroundBasic18" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(707, 1022)
+
+[node name="GroundBasic19" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(771, 1022)
+
+[node name="GroundBasic20" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(835, 1022)
+
+[node name="GroundBasic21" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(899, 1022)
+
+[node name="GroundBasic22" parent="Environment" instance=ExtResource("2_m0mis")]
+position = Vector2(963, 1022)
+
+[node name="Enemy1" parent="." instance=ExtResource("5_nnwex")]
+position = Vector2(154, 244)
+
+[node name="Enemy2" parent="." instance=ExtResource("5_nnwex")]
+position = Vector2(715, 552)

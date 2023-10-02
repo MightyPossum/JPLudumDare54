@@ -1,0 +1,87 @@
+[gd_scene load_steps=15 format=3 uid="uid://c7mpvf6vx61so"]
+
+[ext_resource type="Script" path="res://GameManager.gd" id="1_aau85"]
+[ext_resource type="PackedScene" uid="uid://1vgoxjkbnksn" path="res://player.tscn" id="2_dhcsu"]
+[ext_resource type="Script" path="res://CloudMove.gd" id="3_uk1nt"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="4_iixdv"]
+[ext_resource type="Texture2D" uid="uid://s58js1vgnq5j" path="res://assets/Level/Cloud_4.png" id="4_re7mb"]
+[ext_resource type="PackedScene" uid="uid://cesdpfwwjwx0p" path="res://ground_bottom_MM.tscn" id="4_u5yn0"]
+[ext_resource type="PackedScene" uid="uid://bkei16urhght4" path="res://ground_MM.tscn" id="5_jcejq"]
+[ext_resource type="PackedScene" uid="uid://bjxhy6byd3lro" path="res://ground_medium.tscn" id="6_l6036"]
+[ext_resource type="PackedScene" uid="uid://ch55rptpilyc8" path="res://wall.tscn" id="6_q557w"]
+[ext_resource type="PackedScene" uid="uid://b30rweb2ybqig" path="res://start_sign.tscn" id="8_qr0re"]
+[ext_resource type="Texture2D" uid="uid://cxflc5g2sxgqw" path="res://assets/Level/Cloud_2.png" id="9_ycpgf"]
+[ext_resource type="AudioStream" uid="uid://dotbmeugv0rg3" path="res://assets/Sounds/explosion (2).wav" id="12_eiyjl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ana8"]
+size = Vector2(420.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0chjd"]
+size = Vector2(53.0243, 507.223)
+
+[node name="StartSceen" type="Node2D"]
+script = ExtResource("1_aau85")
+
+[node name="Cloud2" type="Sprite2D" parent="."]
+position = Vector2(612, 291)
+texture = ExtResource("9_ycpgf")
+script = ExtResource("3_uk1nt")
+
+[node name="Cloud4" type="Sprite2D" parent="."]
+position = Vector2(93, 356)
+texture = ExtResource("4_re7mb")
+script = ExtResource("3_uk1nt")
+
+[node name="Player" parent="." instance=ExtResource("2_dhcsu")]
+position = Vector2(722, 468)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(308, 68)
+script = ExtResource("4_iixdv")
+
+[node name="GroundBasic" parent="." instance=ExtResource("4_u5yn0")]
+position = Vector2(-600, 503)
+
+[node name="Wall2" parent="." instance=ExtResource("6_q557w")]
+visible = false
+position = Vector2(497, 469)
+scale = Vector2(1, -47.56)
+
+[node name="Wall3" parent="." instance=ExtResource("6_q557w")]
+visible = false
+position = Vector2(947, 469)
+scale = Vector2(1, -44.16)
+
+[node name="GroundBasic3" parent="." instance=ExtResource("6_l6036")]
+position = Vector2(945, 361)
+
+[node name="FeliciaBye" parent="." instance=ExtResource("5_jcejq")]
+position = Vector2(544, 503)
+
+[node name="startSign" parent="." instance=ExtResource("8_qr0re")]
+position = Vector2(575, 335)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="startSign"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(710, 1409)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(44, 23)
+scale = Vector2(6.12, 6.15679)
+shape = SubResource("RectangleShape2D_8ana8")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(608, 294)
+scale = Vector2(1, -2.70238)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(118, -5.23901)
+scale = Vector2(8.10948, -0.243439)
+shape = SubResource("RectangleShape2D_0chjd")
+
+[node name="GroundGoBang" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_eiyjl")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_2_body_exited"]

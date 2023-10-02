@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b30rweb2ybqig"]
+
+[ext_resource type="Texture2D" uid="uid://bktqmumrn0t58" path="res://assets/Start_Sign.png" id="1_fqssp"]
+[ext_resource type="Script" path="res://start_sign.gd" id="1_wgtrv"]
+[ext_resource type="PackedScene" uid="uid://diu5a3o5mhrqv" path="res://ground_impact_particle.tscn" id="2_fgq4i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rs8bv"]
+size = Vector2(128, 76)
+
+[node name="startSign" type="Node2D"]
+script = ExtResource("1_wgtrv")
+ground_impact_particle = ExtResource("2_fgq4i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fqssp")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_rs8bv")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

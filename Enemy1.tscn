@@ -1,7 +1,51 @@
-[gd_scene load_steps=5 format=3 uid="uid://if7maxmy1mhl"]
+[gd_scene load_steps=13 format=3 uid="uid://if7maxmy1mhl"]
 
 [ext_resource type="Script" path="res://Enemy1.gd" id="1_k7ver"]
-[ext_resource type="Texture2D" uid="uid://bqqlkfnqeaxb0" path="res://assets/Enemy (1).png" id="1_m56pw"]
+[ext_resource type="PackedScene" uid="uid://ckcpbm765cwu3" path="res://projectileEnemy.tscn" id="2_ttiat"]
+[ext_resource type="Texture2D" uid="uid://yq1drbixucw1" path="res://assets/Enemies/Enemy1/E1_Walk_Left_1.png" id="3_0xpxb"]
+[ext_resource type="Texture2D" uid="uid://cphmwgif2rh8d" path="res://assets/Enemies/Enemy1/E1_Walk_Left_2.png" id="4_wed0r"]
+[ext_resource type="Texture2D" uid="uid://mbym61pf1xe5" path="res://assets/Enemies/Enemy1/E1_Walk_Left_3.png" id="5_28x3u"]
+[ext_resource type="Texture2D" uid="uid://cepso3yr3bbxg" path="res://assets/Enemies/Enemy1/E1_Walk_Right_1.png" id="6_bu0b5"]
+[ext_resource type="Texture2D" uid="uid://s4d36415o717" path="res://assets/Enemies/Enemy1/E1_Walk_Right_2 (1).png" id="7_v28of"]
+[ext_resource type="Texture2D" uid="uid://dtaxxjbumsuyy" path="res://assets/Enemies/Enemy1/E1_Walk_Right_3.png" id="8_p4ak0"]
+[ext_resource type="AudioStream" uid="uid://xkvcf3i61vdf" path="res://assets/Sounds/hitHurt (1).wav" id="9_vc4mr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rsh7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0xpxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wed0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_28x3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wed0r")
+}],
+"loop": true,
+"name": &"walkLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bu0b5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v28of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p4ak0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v28of")
+}],
+"loop": true,
+"name": &"walkRight",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qglmw"]
 size = Vector2(63.9657, 75.6169)
@@ -12,12 +56,20 @@ size = Vector2(44, 64.5)
 [node name="Enemy1" type="RigidBody2D" groups=["Enemy"]]
 collision_layer = 2
 collision_mask = 2
+gravity_scale = 0.0
+lock_rotation = true
 script = ExtResource("1_k7ver")
+Projectile = ExtResource("2_ttiat")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_m56pw")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_rsh7q")
+animation = &"walkRight"
+frame_progress = 0.510617
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-2, -7.15256e-07)
@@ -28,8 +80,7 @@ shape = SubResource("RectangleShape2D_qglmw")
 position = Vector2(-2, 7.75)
 shape = SubResource("RectangleShape2D_qyfk8")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[node name="HitAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_vc4mr")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

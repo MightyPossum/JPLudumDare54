@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://f1mpkhdklid2"]
+
+[ext_resource type="Script" path="res://particle.gd" id="1_83syy"]
+[ext_resource type="Texture2D" uid="uid://cw5wm2nb65mtw" path="res://assets/Particles/PARTICLE_Key2.png" id="2_wwle7"]
+
+[node name="playerParticle" type="Node2D"]
+script = ExtResource("1_83syy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wwle7")

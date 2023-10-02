@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbaoqkm7wvbj3"]
+
+[ext_resource type="Texture2D" uid="uid://bd6vkm6b6r4a6" path="res://assets/Level/2/Lev2_Top_Center.png" id="1_hpuq2"]
+[ext_resource type="Texture2D" uid="uid://ukfuvlrgvet6" path="res://assets/Level/2/Lev2_Bottom_Center.png" id="2_n6pax"]
+[ext_resource type="Texture2D" uid="uid://dskf8k4uupxl4" path="res://assets/Level/2/Lev2_Bottom_Corner_Left.png" id="3_ev5nf"]
+[ext_resource type="Texture2D" uid="uid://wlqxbndnj5tq" path="res://assets/Level/2/Lev2_Top_Corner_Left.png" id="4_s0pxw"]
+[ext_resource type="Texture2D" uid="uid://c8abiaovnk277" path="res://assets/Level/2/Lev2_Bottom_Corner_Right.png" id="5_e2bhs"]
+[ext_resource type="Texture2D" uid="uid://dn150tg78cqgs" path="res://assets/Level/2/Lev2_Top_Corner_Right.png" id="6_medk6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycu8s"]
+size = Vector2(153.514, 37.5)
+
+[node name="GroundBasic" type="StaticBody2D" groups=["Wall"]]
+collision_layer = 7
+collision_mask = 7
+
+[node name="LevGroundTop6" type="Sprite2D" parent="."]
+position = Vector2(320, 0)
+texture = ExtResource("1_hpuq2")
+
+[node name="LevGroundBottom6" type="Sprite2D" parent="."]
+position = Vector2(320, 64)
+texture = ExtResource("2_n6pax")
+
+[node name="LevGroundTop7" type="Sprite2D" parent="."]
+position = Vector2(256, 0)
+texture = ExtResource("1_hpuq2")
+
+[node name="LevGroundBottom7" type="Sprite2D" parent="."]
+position = Vector2(256, 64)
+texture = ExtResource("2_n6pax")
+
+[node name="LevGroundTop8" type="Sprite2D" parent="."]
+position = Vector2(192, 0)
+texture = ExtResource("1_hpuq2")
+
+[node name="LevGroundBottom8" type="Sprite2D" parent="."]
+position = Vector2(192, 64)
+texture = ExtResource("2_n6pax")
+
+[node name="LevGroundTop9" type="Sprite2D" parent="."]
+position = Vector2(128, 0)
+texture = ExtResource("1_hpuq2")
+
+[node name="LevGroundBottom9" type="Sprite2D" parent="."]
+position = Vector2(128, 64)
+texture = ExtResource("2_n6pax")
+
+[node name="LevGroundTop10" type="Sprite2D" parent="."]
+position = Vector2(64, 0)
+texture = ExtResource("1_hpuq2")
+
+[node name="LevGroundBottom10" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("2_n6pax")
+
+[node name="LevGroundTop11" type="Sprite2D" parent="."]
+texture = ExtResource("1_hpuq2")
+
+[node name="LevGroundBottom11" type="Sprite2D" parent="."]
+position = Vector2(0, 64)
+texture = ExtResource("2_n6pax")
+
+[node name="LevGroundBottomCornerLeft_png" type="Sprite2D" parent="."]
+position = Vector2(-64, 64)
+texture = ExtResource("3_ev5nf")
+
+[node name="LevGroundCornerLeft" type="Sprite2D" parent="."]
+position = Vector2(-64, 0)
+texture = ExtResource("4_s0pxw")
+
+[node name="LevGroundBottomCornerRight" type="Sprite2D" parent="."]
+position = Vector2(384, 64)
+texture = ExtResource("5_e2bhs")
+
+[node name="LevGroundCornerRight" type="Sprite2D" parent="."]
+position = Vector2(384, 0)
+texture = ExtResource("6_medk6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(159.834, 32)
+scale = Vector2(3.20708, 1.6)
+shape = SubResource("RectangleShape2D_ycu8s")

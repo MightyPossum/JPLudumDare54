@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://b6htbx1ndhyf8"]
+
+[ext_resource type="Script" path="res://GameManager.gd" id="1_fpuue"]
+[ext_resource type="PackedScene" uid="uid://1vgoxjkbnksn" path="res://player.tscn" id="2_cyx4e"]
+[ext_resource type="PackedScene" uid="uid://lr22px105v80" path="res://bg_alt2.tscn" id="2_muupn"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="3_g61yy"]
+[ext_resource type="PackedScene" uid="uid://bv50iodm1qo35" path="res://ground_BOSS.tscn" id="5_tfmnp"]
+[ext_resource type="PackedScene" uid="uid://ufd4vlrtdiey" path="res://ground_bottom_BOSS.tscn" id="6_4nuii"]
+[ext_resource type="PackedScene" uid="uid://bd58oximgjdw0" path="res://Bossman.tscn" id="6_hphcu"]
+[ext_resource type="PackedScene" uid="uid://ch55rptpilyc8" path="res://wall.tscn" id="8_4l47t"]
+[ext_resource type="AudioStream" uid="uid://d4cugb53qqod2" path="res://assets/Sounds/explosion (1).wav" id="9_nb5if"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri2p6"]
+size = Vector2(529, 479)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cm0n"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fpuue")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2025
+offset_left = -1931.0
+offset_top = -2146.0
+offset_right = -1891.0
+offset_bottom = -2106.0
+scale = Vector2(159.967, 267.391)
+color = Color(0.0980392, 0.0901961, 0.129412, 1)
+
+[node name="BG" parent="." instance=ExtResource("2_muupn")]
+z_index = -930
+position = Vector2(-1343, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_cyx4e")]
+z_index = 10
+position = Vector2(568, -223)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(292, 166)
+scale = Vector2(1, -0.519999)
+script = ExtResource("3_g61yy")
+
+[node name="Platforms" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Enemies" type="Node2D" parent="."]
+z_index = 2
+position = Vector2(0, 5)
+
+[node name="Wall" type="Node2D" parent="."]
+position = Vector2(25, 2)
+
+[node name="Wall2" parent="Wall" instance=ExtResource("8_4l47t")]
+position = Vector2(1064, 217)
+scale = Vector2(1, 29.36)
+
+[node name="Wall3" parent="Wall" instance=ExtResource("8_4l47t")]
+position = Vector2(22, 217)
+scale = Vector2(-1, -31.32)
+
+[node name="GroundBasic" parent="Wall" instance=ExtResource("6_4nuii")]
+position = Vector2(-1060, 423)
+
+[node name="TheEnd" parent="Wall" instance=ExtResource("5_tfmnp")]
+position = Vector2(92, 423)
+
+[node name="Scenery" type="Node2D" parent="."]
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Enemy2" parent="." instance=ExtResource("6_hphcu")]
+position = Vector2(197, 356)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(331, 130)
+scale = Vector2(4.24, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 5)
+shape = SubResource("RectangleShape2D_ri2p6")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(252, 1782)
+scale = Vector2(0.108403, 0.063394)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+scale = Vector2(1262.82, 65.9843)
+shape = SubResource("RectangleShape2D_6cm0n")
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_nb5if")
+
+[connection signal="body_exited" from="Area2D" to="." method="_leave_game"]
+[connection signal="body_entered" from="Area2D2" to="." method="the_end"]

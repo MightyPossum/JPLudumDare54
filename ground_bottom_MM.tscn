@@ -1,0 +1,355 @@
+[gd_scene load_steps=9 format=3 uid="uid://cesdpfwwjwx0p"]
+
+[ext_resource type="Texture2D" uid="uid://rh1jfns53vij" path="res://assets/Level/Lev_Ground.png" id="1_ul06s"]
+[ext_resource type="Texture2D" uid="uid://bt1havo8ykpmy" path="res://assets/Level/Lev_Ground_Bottom.png" id="2_efvju"]
+[ext_resource type="Texture2D" uid="uid://bitljp5g2ncvf" path="res://assets/Level/Lev_Ground_Corner_Left.png" id="3_dgjvl"]
+[ext_resource type="Texture2D" uid="uid://cp4up463yxgka" path="res://assets/Level/Lev_Ground_Bottom_Corner_Left.png.png" id="4_uhmry"]
+[ext_resource type="Texture2D" uid="uid://byglylan2har1" path="res://assets/Level/Lev_Ground_Corner_Right.png" id="5_jy28o"]
+[ext_resource type="Texture2D" uid="uid://3i2duw882nn6" path="res://assets/Level/Lev_Ground_Bottom_Corner_Right.png" id="6_hh6d6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ws45u"]
+size = Vector2(415.643, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycu8s"]
+size = Vector2(385.865, 37.5)
+
+[node name="GroundBasic" type="StaticBody2D" groups=["Wall"]]
+collision_layer = 7
+collision_mask = 7
+
+[node name="LevGroundTop" type="Sprite2D" parent="."]
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom" type="Sprite2D" parent="."]
+position = Vector2(0, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop2" type="Sprite2D" parent="."]
+position = Vector2(64, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom2" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop3" type="Sprite2D" parent="."]
+position = Vector2(128, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom3" type="Sprite2D" parent="."]
+position = Vector2(128, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop4" type="Sprite2D" parent="."]
+position = Vector2(192, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom4" type="Sprite2D" parent="."]
+position = Vector2(192, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop5" type="Sprite2D" parent="."]
+position = Vector2(256, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom5" type="Sprite2D" parent="."]
+position = Vector2(256, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop6" type="Sprite2D" parent="."]
+position = Vector2(320, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom6" type="Sprite2D" parent="."]
+position = Vector2(320, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop7" type="Sprite2D" parent="."]
+position = Vector2(384, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom7" type="Sprite2D" parent="."]
+position = Vector2(384, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop8" type="Sprite2D" parent="."]
+position = Vector2(448, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom8" type="Sprite2D" parent="."]
+position = Vector2(448, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop9" type="Sprite2D" parent="."]
+position = Vector2(512, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom9" type="Sprite2D" parent="."]
+position = Vector2(512, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop10" type="Sprite2D" parent="."]
+position = Vector2(576, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom10" type="Sprite2D" parent="."]
+position = Vector2(576, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop11" type="Sprite2D" parent="."]
+position = Vector2(640, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom11" type="Sprite2D" parent="."]
+position = Vector2(640, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop12" type="Sprite2D" parent="."]
+position = Vector2(704, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom12" type="Sprite2D" parent="."]
+position = Vector2(704, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop13" type="Sprite2D" parent="."]
+position = Vector2(768, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom13" type="Sprite2D" parent="."]
+position = Vector2(768, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop14" type="Sprite2D" parent="."]
+position = Vector2(832, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom14" type="Sprite2D" parent="."]
+position = Vector2(832, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop15" type="Sprite2D" parent="."]
+position = Vector2(896, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom15" type="Sprite2D" parent="."]
+position = Vector2(896, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop16" type="Sprite2D" parent="."]
+position = Vector2(960, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom16" type="Sprite2D" parent="."]
+position = Vector2(960, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop17" type="Sprite2D" parent="."]
+position = Vector2(1024, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom17" type="Sprite2D" parent="."]
+position = Vector2(1024, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop18" type="Sprite2D" parent="."]
+position = Vector2(1088, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom18" type="Sprite2D" parent="."]
+position = Vector2(1088, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop24" type="Sprite2D" parent="."]
+position = Vector2(1472, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom24" type="Sprite2D" parent="."]
+position = Vector2(1472, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop42" type="Sprite2D" parent="."]
+position = Vector2(1407, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom42" type="Sprite2D" parent="."]
+position = Vector2(1407, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop43" type="Sprite2D" parent="."]
+position = Vector2(1408, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom43" type="Sprite2D" parent="."]
+position = Vector2(1408, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop44" type="Sprite2D" parent="."]
+position = Vector2(1343, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom44" type="Sprite2D" parent="."]
+position = Vector2(1343, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop25" type="Sprite2D" parent="."]
+position = Vector2(1536, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom25" type="Sprite2D" parent="."]
+position = Vector2(1536, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop26" type="Sprite2D" parent="."]
+position = Vector2(1600, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom26" type="Sprite2D" parent="."]
+position = Vector2(1600, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop27" type="Sprite2D" parent="."]
+position = Vector2(1664, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom27" type="Sprite2D" parent="."]
+position = Vector2(1664, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop28" type="Sprite2D" parent="."]
+position = Vector2(1728, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom28" type="Sprite2D" parent="."]
+position = Vector2(1728, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop29" type="Sprite2D" parent="."]
+position = Vector2(1792, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom29" type="Sprite2D" parent="."]
+position = Vector2(1792, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop30" type="Sprite2D" parent="."]
+position = Vector2(1856, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom30" type="Sprite2D" parent="."]
+position = Vector2(1856, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop31" type="Sprite2D" parent="."]
+position = Vector2(1920, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom31" type="Sprite2D" parent="."]
+position = Vector2(1920, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop32" type="Sprite2D" parent="."]
+position = Vector2(1984, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom32" type="Sprite2D" parent="."]
+position = Vector2(1984, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop33" type="Sprite2D" parent="."]
+position = Vector2(2048, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom33" type="Sprite2D" parent="."]
+position = Vector2(2048, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop34" type="Sprite2D" parent="."]
+position = Vector2(2112, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom34" type="Sprite2D" parent="."]
+position = Vector2(2112, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop35" type="Sprite2D" parent="."]
+position = Vector2(2176, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom35" type="Sprite2D" parent="."]
+position = Vector2(2176, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop36" type="Sprite2D" parent="."]
+position = Vector2(2240, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom36" type="Sprite2D" parent="."]
+position = Vector2(2240, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop37" type="Sprite2D" parent="."]
+position = Vector2(2304, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom37" type="Sprite2D" parent="."]
+position = Vector2(2304, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop38" type="Sprite2D" parent="."]
+position = Vector2(2368, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom38" type="Sprite2D" parent="."]
+position = Vector2(2368, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop39" type="Sprite2D" parent="."]
+position = Vector2(2432, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom39" type="Sprite2D" parent="."]
+position = Vector2(2432, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop40" type="Sprite2D" parent="."]
+position = Vector2(2496, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom40" type="Sprite2D" parent="."]
+position = Vector2(2496, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundTop41" type="Sprite2D" parent="."]
+position = Vector2(2560, 0)
+texture = ExtResource("1_ul06s")
+
+[node name="LevGroundBottom41" type="Sprite2D" parent="."]
+position = Vector2(2560, 64)
+texture = ExtResource("2_efvju")
+
+[node name="LevGroundCornerLeft" type="Sprite2D" parent="."]
+position = Vector2(1279, 0)
+texture = ExtResource("3_dgjvl")
+
+[node name="LevGroundBottomCornerLeft_png" type="Sprite2D" parent="."]
+position = Vector2(1279, 64)
+texture = ExtResource("4_uhmry")
+
+[node name="LevGroundCornerRight" type="Sprite2D" parent="."]
+position = Vector2(1152, 0)
+texture = ExtResource("5_jy28o")
+
+[node name="LevGroundBottomCornerRight" type="Sprite2D" parent="."]
+position = Vector2(1152, 64)
+texture = ExtResource("6_hh6d6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1922.5, 26)
+scale = Vector2(3.20708, 1.6)
+shape = SubResource("RectangleShape2D_ws45u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(556.25, 32)
+scale = Vector2(3.20708, 1.6)
+shape = SubResource("RectangleShape2D_ycu8s")

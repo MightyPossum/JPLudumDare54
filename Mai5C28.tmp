@@ -1,0 +1,308 @@
+[gd_scene load_steps=18 format=3 uid="uid://nkpcrt1hqqbx"]
+
+[ext_resource type="PackedScene" uid="uid://1vgoxjkbnksn" path="res://player.tscn" id="1_376uc"]
+[ext_resource type="Script" path="res://GameManager.gd" id="1_khf10"]
+[ext_resource type="PackedScene" uid="uid://n7l2x7xkeubj" path="res://ground_basic.tscn" id="2_m0mis"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="4_813fd"]
+[ext_resource type="PackedScene" uid="uid://qi0gl6uxu1d0" path="res://ground_large.tscn" id="5_1dl1n"]
+[ext_resource type="PackedScene" uid="uid://if7maxmy1mhl" path="res://Enemy1.tscn" id="5_nnwex"]
+[ext_resource type="PackedScene" uid="uid://bjxhy6byd3lro" path="res://ground_medium.tscn" id="6_uvrkf"]
+[ext_resource type="PackedScene" uid="uid://dt11bvrkisj46" path="res://wall_bottom.tscn" id="8_f6bs8"]
+[ext_resource type="PackedScene" uid="uid://ch55rptpilyc8" path="res://wall.tscn" id="9_3rnq6"]
+[ext_resource type="PackedScene" uid="uid://qtmotmpp8vvi" path="res://ground_bottom.tscn" id="10_hqsea"]
+[ext_resource type="PackedScene" uid="uid://2brmaq1r1xq5" path="res://coin.tscn" id="11_kup0n"]
+[ext_resource type="Texture2D" uid="uid://c1i2qqtddc075" path="res://assets/Level/WRLD_Tree_1.png" id="12_mw2f8"]
+[ext_resource type="Texture2D" uid="uid://xqht0l7inepl" path="res://assets/Level/WRLD_Flower_2.png" id="13_2lsl1"]
+[ext_resource type="Texture2D" uid="uid://dup8o3tmg4byr" path="res://assets/Level/WRLD_Bush_1.png" id="14_4ujji"]
+[ext_resource type="Texture2D" uid="uid://cd82dx1s0lf8i" path="res://assets/Level/WRLD_Flower_1.png" id="14_nar4m"]
+[ext_resource type="PackedScene" uid="uid://7buc4leax5aw" path="res://door.tscn" id="15_6fy3x"]
+[ext_resource type="PackedScene" uid="uid://c55cqsd8ang1k" path="res://key.tscn" id="16_kofsv"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_khf10")
+
+[node name="Player" parent="." instance=ExtResource("1_376uc")]
+z_index = 10
+position = Vector2(255, -476)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(292, 166)
+scale = Vector2(1, -0.519999)
+script = ExtResource("4_813fd")
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Platforms" type="Node2D" parent="."]
+z_index = 1
+
+[node name="GroundBasic" parent="Platforms" instance=ExtResource("2_m0mis")]
+position = Vector2(263, 286)
+
+[node name="GroundBasic2" parent="Platforms" instance=ExtResource("5_1dl1n")]
+position = Vector2(96, 427)
+
+[node name="GroundBasic13" parent="Platforms" instance=ExtResource("5_1dl1n")]
+position = Vector2(1195, 781)
+
+[node name="GroundBasic3" parent="Platforms" instance=ExtResource("2_m0mis")]
+position = Vector2(674, 495)
+
+[node name="GroundBasic4" parent="Platforms" instance=ExtResource("2_m0mis")]
+position = Vector2(1182, 227)
+
+[node name="GroundBasic5" parent="Platforms" instance=ExtResource("2_m0mis")]
+position = Vector2(954, 361)
+
+[node name="GroundBasic6" parent="Platforms" instance=ExtResource("2_m0mis")]
+position = Vector2(544, 624)
+
+[node name="GroundBasic8" parent="Platforms" instance=ExtResource("2_m0mis")]
+position = Vector2(156, 842)
+
+[node name="GroundBasic10" parent="Platforms" instance=ExtResource("2_m0mis")]
+position = Vector2(-171, 888)
+
+[node name="GroundBasic11" parent="Platforms" instance=ExtResource("2_m0mis")]
+position = Vector2(810, 951)
+
+[node name="GroundBasic12" parent="Platforms" instance=ExtResource("2_m0mis")]
+position = Vector2(1016, 878)
+
+[node name="GroundBasic7" parent="Platforms" instance=ExtResource("6_uvrkf")]
+position = Vector2(457, 754)
+
+[node name="GroundBasic9" parent="Platforms" instance=ExtResource("6_uvrkf")]
+position = Vector2(-140, 654)
+
+[node name="GroundBasic14" parent="Platforms" instance=ExtResource("10_hqsea")]
+position = Vector2(-256, 1023)
+
+[node name="Enemies" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Enemy1" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(267, 384)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(670, 453)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(987, 319)
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(1183, 184)
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(1493, 741)
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(1245, 740)
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(816, 911)
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(1024, 839)
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(533, 719)
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(180, 794)
+
+[node name="Enemy12" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(-164, 846)
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource("5_nnwex")]
+position = Vector2(-134, 611)
+
+[node name="Wall" type="Node2D" parent="."]
+position = Vector2(25, 2)
+
+[node name="Wall2" parent="Wall" instance=ExtResource("9_3rnq6")]
+position = Vector2(1595, 354)
+scale = Vector2(1, 18.88)
+
+[node name="Wall_bottom" parent="Wall" instance=ExtResource("8_f6bs8")]
+position = Vector2(1595, 989)
+
+[node name="Wall3" parent="Wall" instance=ExtResource("9_3rnq6")]
+position = Vector2(-301, 354)
+scale = Vector2(-1, -18.88)
+
+[node name="Wall_bottom2" parent="Wall" instance=ExtResource("8_f6bs8")]
+position = Vector2(-301, 989)
+scale = Vector2(-1, 1)
+
+[node name="Scenery" type="Node2D" parent="."]
+
+[node name="WrldTree1" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(188, 254)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree2" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(230, 395)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree3" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(927, 329)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree4" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(1152, 752)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree5" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(1551, 750)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree7" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(608, 597)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree8" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(-101, 856)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree9" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(215, 1001)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree12" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(172, 1007)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree13" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(261, 997)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree10" type="Sprite2D" parent="Scenery"]
+z_index = 470
+position = Vector2(239, 991)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree11" type="Sprite2D" parent="Scenery"]
+z_index = 105
+position = Vector2(194, 991)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree14" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(1329, 1001)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree15" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(1286, 1007)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree16" type="Sprite2D" parent="Scenery"]
+z_index = -10
+position = Vector2(1375, 997)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree17" type="Sprite2D" parent="Scenery"]
+z_index = 470
+position = Vector2(1353, 991)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldTree18" type="Sprite2D" parent="Scenery"]
+z_index = 105
+position = Vector2(1308, 991)
+texture = ExtResource("12_mw2f8")
+
+[node name="WrldFlower2" type="Sprite2D" parent="Scenery"]
+position = Vector2(197, 287)
+texture = ExtResource("13_2lsl1")
+
+[node name="WrldFlower9" type="Sprite2D" parent="Scenery"]
+position = Vector2(222, 427)
+texture = ExtResource("13_2lsl1")
+
+[node name="WrldFlower4" type="Sprite2D" parent="Scenery"]
+position = Vector2(945, 361)
+texture = ExtResource("13_2lsl1")
+
+[node name="WrldFlower5" type="Sprite2D" parent="Scenery"]
+position = Vector2(1322, 781)
+texture = ExtResource("13_2lsl1")
+
+[node name="WrldFlower6" type="Sprite2D" parent="Scenery"]
+position = Vector2(106, 842)
+texture = ExtResource("13_2lsl1")
+
+[node name="WrldFlower1" type="Sprite2D" parent="Scenery"]
+z_index = 300
+position = Vector2(211, 289)
+texture = ExtResource("14_nar4m")
+
+[node name="WrldFlower8" type="Sprite2D" parent="Scenery"]
+z_index = 300
+position = Vector2(598, 754)
+texture = ExtResource("14_nar4m")
+
+[node name="WrldFlower7" type="Sprite2D" parent="Scenery"]
+z_index = 300
+position = Vector2(-73, 660)
+texture = ExtResource("14_nar4m")
+
+[node name="WrldFlower3" type="Sprite2D" parent="Scenery"]
+z_index = 300
+position = Vector2(893, 951)
+texture = ExtResource("14_nar4m")
+
+[node name="WrldBush1" type="Sprite2D" parent="Scenery"]
+position = Vector2(614, 754)
+texture = ExtResource("14_4ujji")
+
+[node name="WrldBush2" type="Sprite2D" parent="Scenery"]
+position = Vector2(987, 878)
+texture = ExtResource("14_4ujji")
+
+[node name="WrldBush3" type="Sprite2D" parent="Scenery"]
+position = Vector2(665, 495)
+texture = ExtResource("14_4ujji")
+
+[node name="WrldBush4" type="Sprite2D" parent="Scenery"]
+position = Vector2(1221, 227)
+texture = ExtResource("14_4ujji")
+
+[node name="WrldBush5" type="Sprite2D" parent="Scenery"]
+position = Vector2(254, 427)
+texture = ExtResource("14_4ujji")
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Coin" parent="Collectables" instance=ExtResource("11_kup0n")]
+position = Vector2(1236, 220)
+
+[node name="Coin2" parent="Collectables" instance=ExtResource("11_kup0n")]
+position = Vector2(223, 1017)
+
+[node name="Coin3" parent="Collectables" instance=ExtResource("11_kup0n")]
+position = Vector2(-231, 871)
+
+[node name="Coin4" parent="Collectables" instance=ExtResource("11_kup0n")]
+position = Vector2(-193, 632)
+
+[node name="Coin5" parent="Collectables" instance=ExtResource("11_kup0n")]
+position = Vector2(322, 272)
+
+[node name="Coin6" parent="Collectables" instance=ExtResource("11_kup0n")]
+position = Vector2(1566, 1007)
+
+[node name="door" parent="." instance=ExtResource("15_6fy3x")]
+position = Vector2(0, 1001)
+
+[node name="key" parent="." instance=ExtResource("16_kofsv")]
+position = Vector2(1372, 746)

@@ -1,21 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://2250o85agq15"]
+[gd_scene load_steps=9 format=3 uid="uid://2250o85agq15"]
 
-[ext_resource type="Texture2D" uid="uid://d2dg02t205luo" path="res://assets/projectile.png" id="1_eq7xf"]
 [ext_resource type="Script" path="res://projectile.gd" id="1_ssdqr"]
+[ext_resource type="PackedScene" uid="uid://pssyv4ol4tvw" path="res://player_particle.tscn" id="2_67m70"]
+[ext_resource type="Texture2D" uid="uid://cj23ouxuojp0j" path="res://assets/Player/PL_Projectile_Left_1.png" id="2_q0dkw"]
+[ext_resource type="PackedScene" uid="uid://dranjc4dbnd0v" path="res://enemy1_shot_particle.tscn" id="3_livgw"]
+[ext_resource type="Texture2D" uid="uid://cg0cxhaisjlug" path="res://assets/Player/Pl_Projectile_Right_1.png" id="3_rmxpo"]
+[ext_resource type="AudioStream" uid="uid://ca3om0wvtnff7" path="res://assets/Sounds/laserShoot (1).wav" id="6_iec03"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jtfhp"]
-radius = 3.16228
+[sub_resource type="SpriteFrames" id="SpriteFrames_vuvfo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rmxpo")
+}],
+"loop": true,
+"name": &"shootLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q0dkw")
+}],
+"loop": true,
+"name": &"shootRight",
+"speed": 5.0
+}]
 
-[node name="Node2D" type="Area2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m04py"]
+radius = 5.53572
+height = 11.6259
+
+[node name="ProjectilePlayer" type="Area2D"]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_ssdqr")
+player_impact_particle = ExtResource("2_67m70")
+enemy_impact_particle = ExtResource("3_livgw")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vuvfo")
+animation = &"shootLeft"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_jtfhp")
+position = Vector2(5, -2)
+rotation = 1.5708
+scale = Vector2(1.80645, 2.75247)
+shape = SubResource("CapsuleShape2D_m04py")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_eq7xf")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_iec03")
+autoplay = true
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

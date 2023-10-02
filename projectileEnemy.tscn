@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://ckcpbm765cwu3"]
+
+[ext_resource type="Script" path="res://projectile.gd" id="1_q7bro"]
+[ext_resource type="Texture2D" uid="uid://d2dg02t205luo" path="res://assets/projectile.png" id="2_kh0vv"]
+[ext_resource type="PackedScene" uid="uid://pssyv4ol4tvw" path="res://player_particle.tscn" id="2_n0ad2"]
+[ext_resource type="PackedScene" uid="uid://dranjc4dbnd0v" path="res://enemy1_shot_particle.tscn" id="3_d5wh7"]
+[ext_resource type="AudioStream" uid="uid://8o6cxbhbseem" path="res://assets/Sounds/laserShoot.wav" id="5_4wyu8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtfhp"]
+radius = 3.16228
+
+[node name="ProjectileEnemy" type="Area2D"]
+script = ExtResource("1_q7bro")
+player_impact_particle = ExtResource("2_n0ad2")
+enemy_impact_particle = ExtResource("3_d5wh7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jtfhp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kh0vv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_4wyu8")
+autoplay = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
