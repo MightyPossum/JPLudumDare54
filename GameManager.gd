@@ -12,6 +12,7 @@ var GLOBAL_VALUES
 var player_ready = false
 var boss_level = false
 
+var startTimer = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GLOBAL_VALUES = get_node("/root/GlobalValues")
@@ -34,6 +35,40 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	if GLOBAL_VALUES.IN_MENU:
+		startTimer += _delta
+		
+		if startTimer >= 25:
+			DisplayServer.window_set_title("Psst... have you tried shooting the sign")
+		elif startTimer >= 14:
+			DisplayServer.window_set_title("WASD to move, Space Bar to shoot")
+		elif startTimer >= 13:
+			DisplayServer.window_set_title("Why don't you start the game?.............")
+		elif startTimer >= 12:
+			DisplayServer.window_set_title("Why don't you start the game?............")
+		elif startTimer >= 11:
+			DisplayServer.window_set_title("Why don't you start the game?...........")
+		elif startTimer >= 10:
+			DisplayServer.window_set_title("Why don't you start the game?..........")
+		elif startTimer >= 9:
+			DisplayServer.window_set_title("Why don't you start the game?.........")
+		elif startTimer >= 8:
+			DisplayServer.window_set_title("Why don't you start the game?........")
+		elif startTimer >= 7:
+			DisplayServer.window_set_title("Why don't you start the game?.......")
+		elif startTimer >= 6:
+			DisplayServer.window_set_title("Why don't you start the game?.....")
+		elif startTimer >= 5:
+			DisplayServer.window_set_title("Why don't you start the game?....")
+		elif startTimer >= 4:
+			DisplayServer.window_set_title("Why don't you start the game?...")
+		elif startTimer >= 3:
+			DisplayServer.window_set_title("Why don't you start the game?..")
+		elif startTimer >= 2:
+			DisplayServer.window_set_title("Why don't you start the game?.")
+		elif startTimer >= 1:
+			DisplayServer.window_set_title("Why don't you start the game?")
+			
 	if not player_ready:
 		if player.is_on_floor():
 			print('FLIP THE SCRIPT')

@@ -171,6 +171,7 @@ func _physics_process(delta):
 
 	if i_am_dead:
 		GLOBAL_VALUES.GAME_FALLING = true
+		GLOBAL_VALUES.CURRENT_LEVEL = 1
 		death_counter += delta
 		if death_counter >= death_time:
 			get_tree().change_scene_to_file("res://MainScene.tscn")

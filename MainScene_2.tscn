@@ -40,7 +40,7 @@ position = Vector2(-6, -194)
 
 [node name="Player" parent="." instance=ExtResource("2_3nfeq")]
 z_index = 10
-position = Vector2(-67, -522)
+position = Vector2(-263, -522)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(286, -28)
@@ -353,24 +353,6 @@ texture = ExtResource("12_3htvs")
 [node name="Coin2" parent="Collectables" instance=ExtResource("15_duwym")]
 position = Vector2(224, 530)
 
-[node name="Coin7" parent="Collectables" instance=ExtResource("15_duwym")]
-position = Vector2(-51, -92)
-
-[node name="Coin8" parent="Collectables" instance=ExtResource("15_duwym")]
-position = Vector2(-51, -92)
-
-[node name="Coin9" parent="Collectables" instance=ExtResource("15_duwym")]
-position = Vector2(-51, -92)
-
-[node name="Coin10" parent="Collectables" instance=ExtResource("15_duwym")]
-position = Vector2(-51, -92)
-
-[node name="Coin11" parent="Collectables" instance=ExtResource("15_duwym")]
-position = Vector2(-51, -92)
-
-[node name="Coin12" parent="Collectables" instance=ExtResource("15_duwym")]
-position = Vector2(-51, -92)
-
 [node name="Coin3" parent="Collectables" instance=ExtResource("15_duwym")]
 position = Vector2(574, 168)
 
@@ -388,9 +370,6 @@ position = Vector2(1183, 192)
 
 [node name="key" parent="." instance=ExtResource("17_r717c")]
 position = Vector2(1379, -106)
-
-[node name="key2" parent="." instance=ExtResource("17_r717c")]
-position = Vector2(-50, -112)
 
 [node name="door" parent="." instance=ExtResource("13_27ici")]
 position = Vector2(-96, -93)
